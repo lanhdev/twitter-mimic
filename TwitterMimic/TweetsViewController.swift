@@ -25,6 +25,8 @@ class TweetsViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    loadTheme()
+    
     tableView.dataSource = self
     tableView.delegate = self
     tableView.rowHeight = UITableViewAutomaticDimension
@@ -44,6 +46,13 @@ class TweetsViewController: UIViewController {
     } catch {
       print("could not start reachability notifier")
     }
+  }
+  
+  func loadTheme() {
+    UIApplication.shared.statusBarStyle = .lightContent
+    navigationController?.navigationBar.barTintColor = Style.barColor
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Style.foregroundColor]
+    navigationController?.navigationBar.tintColor = Style.foregroundColor // Set text color for back button
   }
   
   @IBAction func onLogoutButton(_ sender: AnyObject) {

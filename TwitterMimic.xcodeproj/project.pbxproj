@@ -20,6 +20,7 @@
 		E2ECA6DA1DC5D853007BA190 /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ECA6D91DC5D853007BA190 /* NewTweetViewController.swift */; };
 		E2F7D7CC1DC4F1BE007DDD10 /* TweetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F7D7CB1DC4F1BE007DDD10 /* TweetDetailsViewController.swift */; };
 		E2F98C911DC684FA005D55A0 /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F98C901DC684FA005D55A0 /* ReplyViewController.swift */; };
+		E2F98C931DC693DA005D55A0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F98C921DC693DA005D55A0 /* Style.swift */; };
 		E2FE9AF41DC10E33004226B6 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE9AF31DC10E33004226B6 /* TwitterClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		E2ECA6D91DC5D853007BA190 /* NewTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTweetViewController.swift; sourceTree = "<group>"; };
 		E2F7D7CB1DC4F1BE007DDD10 /* TweetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailsViewController.swift; sourceTree = "<group>"; };
 		E2F98C901DC684FA005D55A0 /* ReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
+		E2F98C921DC693DA005D55A0 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		E2FE9AF31DC10E33004226B6 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 			children = (
 				E201953E1DBFC0A200D8DFA3 /* User.swift */,
 				E20195401DBFC0BD00D8DFA3 /* Tweet.swift */,
+				E2F98C921DC693DA005D55A0 /* Style.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				E201953F1DBFC0A200D8DFA3 /* User.swift in Sources */,
 				E2ECA6DA1DC5D853007BA190 /* NewTweetViewController.swift in Sources */,
 				E20195411DBFC0BD00D8DFA3 /* Tweet.swift in Sources */,
+				E2F98C931DC693DA005D55A0 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

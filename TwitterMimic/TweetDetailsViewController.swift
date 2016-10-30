@@ -30,13 +30,20 @@ class TweetDetailsViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
-    
+    loadTheme()
     updateTweetInfo()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     updateTweetInfo()
+  }
+  
+  func loadTheme() {
+    UIApplication.shared.statusBarStyle = .lightContent
+    navigationController?.navigationBar.barTintColor = Style.barColor
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Style.foregroundColor]
+    navigationController?.navigationBar.tintColor = Style.foregroundColor // Set text color for back button
   }
   
   @IBAction func favoriteButton(_ sender: UIButton) {

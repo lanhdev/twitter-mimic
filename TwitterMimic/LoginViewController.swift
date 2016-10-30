@@ -17,27 +17,34 @@ class LoginViewController: UIViewController {
   
   let callbackURL = "twittermimic://auth"
   
+  @IBOutlet weak var loginButton: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    loadTheme()
+    view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+    self.loginButton.setBackgroundImage(UIImage(named: "money.png"), for: UIControlState.normal)
+    self.loginButton.alpha = 0.0
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    UIButton.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+      self.loginButton.alpha = 1.0
+    }) { (true) in
+      print ("Completed")
+    }
   }
   
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  func loadTheme() {
+    UIApplication.shared.statusBarStyle = .lightContent
+    navigationController?.navigationBar.barTintColor = Style.barColor
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Style.foregroundColor]
+    navigationController?.navigationBar.tintColor = Style.foregroundColor // Set text color for back button
+  }
   
   @IBAction func onLogin(_ sender: UIButton) {
     TwitterClient.sharedInstance?.logIn(success: {

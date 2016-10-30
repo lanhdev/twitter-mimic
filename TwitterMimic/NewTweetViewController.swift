@@ -24,12 +24,20 @@ class NewTweetViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    loadTheme()
     if user.profileUrl != nil {
       avatarImage.setImageWith(user.profileUrl!)
     }
     usernameLabel.text = user.name
     screennameLabel.text = "@" + user.screen_name!
     tweetTextField.becomeFirstResponder()
+  }
+  
+  func loadTheme() {
+    UIApplication.shared.statusBarStyle = .lightContent
+    navigationController?.navigationBar.barTintColor = Style.barColor
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Style.foregroundColor]
+    navigationController?.navigationBar.tintColor = Style.foregroundColor // Set text color for back button
   }
   
   @IBAction func cancelButton(_ sender: UIBarButtonItem) {

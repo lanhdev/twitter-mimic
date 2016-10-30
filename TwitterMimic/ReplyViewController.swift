@@ -24,12 +24,21 @@ class ReplyViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    loadTheme()
+    
     if tweet.profileUrl != nil {
       avatarImage.setImageWith(tweet.profileUrl!)
     }
     usernameLabel.text = tweet.name
     screennameLabel.text = "@" + tweet.screen_name!
     tweetTextField.becomeFirstResponder()
+  }
+  
+  func loadTheme() {
+    UIApplication.shared.statusBarStyle = .lightContent
+    navigationController?.navigationBar.barTintColor = Style.barColor
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Style.foregroundColor]
+    navigationController?.navigationBar.tintColor = Style.foregroundColor // Set text color for back button
   }
   
   @IBAction func cancelButton(_ sender: UIBarButtonItem) {

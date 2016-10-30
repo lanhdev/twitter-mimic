@@ -20,9 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCm-lG-we8">
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Login"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCm-lG-we8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="XCM-Km-SaL"/>
+                                    <constraint firstAttribute="height" constant="80" id="ley-M5-3UU"/>
+                                </constraints>
+                                <state key="normal" title="Login" image="login"/>
                                 <connections>
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cxz-Aq-gcb"/>
                                 </connections>
@@ -30,11 +33,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LCm-lG-we8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yb1-l0-ifx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCm-lG-we8" secondAttribute="bottom" constant="319" id="yzy-ad-iCN"/>
+                            <constraint firstItem="LCm-lG-we8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gye-ig-hPa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCm-lG-we8" secondAttribute="bottom" constant="100" id="vCl-PZ-eKu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="LCm-lG-we8" id="5hL-1N-Y4l"/>
                         <segue destination="qll-lT-woO" kind="presentation" identifier="loginSegue" id="7wX-Uc-oyD"/>
                     </connections>
                 </viewController>
@@ -521,6 +525,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="login" width="400" height="400"/>
         <image name="reply" width="32" height="32"/>
     </resources>
 </document>
